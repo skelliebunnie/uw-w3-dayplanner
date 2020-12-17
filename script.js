@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	var date = dayjs().format('YYYYMMMDD');
 	var schedule = JSON.parse(localStorage.getItem("planner-schedule")) || [];
 
 	var currentDay = dayjs().format('MMMM DD, YYYY');
@@ -26,10 +27,14 @@ $(document).ready(function() {
 	$(".saveBtn").click(function() {
 		var event = {
 			'text': $(this).siblings().children(".schedule").val(),
-			'time': $(this).siblings().children(".schedule").attr("data-hour")
+			'time': $(this).siblings().children(".schedule").attr("data-hour"),
+			'date': date
 		}
-		
+
 		schedule.push(event);
+
+		localStorage.setItem('planner-schedule', JSON.stringify(schedule));
+		
 	});
 
 });
