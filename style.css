@@ -37,6 +37,7 @@ textarea:focus {
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+  padding: 2rem;
 }
 
 .description{
@@ -79,6 +80,7 @@ tbody {
 .hour.current {
   color: var(--red);
   font-size: x-large;
+  padding: 0.5rem;
 }
 
 .past {
