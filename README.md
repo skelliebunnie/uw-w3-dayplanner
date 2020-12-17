@@ -8,5 +8,8 @@ I used the Day.js script for times instead of Moment.js; I've used Moment before
 
 The assignment didn't mention anything about disabling entry for past times, but I went ahead and added that anyway for practice.
 
+### Screenshot
+![Day Planner Screenshot](assets/screenshot.png?raw=true "Day Planner Screenshot")
+
 ### Gitpages
 https://skelliebunnie.github.io/uw-w3-dayplanner/
