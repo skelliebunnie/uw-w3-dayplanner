@@ -10,10 +10,13 @@ $(document).ready(function() {
 
 		if( $(this).attr("data-hour") == hour ) {
 			$(this).parent().addClass("present");
+			$(this).parent().siblings(".hour").addClass("current");
 
 		} else if ( $(this).attr("data-hour") < hour ) {
 			$(this).parent().addClass("past");
 			$(this).attr("disabled", true);
+			$(this).parent().siblings(".saveBtn").addClass("inactive");
+			$(this).parent().siblings(".hour").addClass("inactive");
 
 		} else {
 			$(this).parent().addClass("future");

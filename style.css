@@ -1,7 +1,10 @@
 :root {
   --red: #ff6961;
   --green: #77dd77;
+  --darkgreen: #328c3b;
   --grey: #d3d3d3;
+  --lightgrey: #f3f3f3;
+  --darkgrey: #919191;
   --blue: #06AED5;
 }
 
@@ -73,6 +76,11 @@ tbody {
   border-right: 1px solid black;
 }
 
+.hour.current {
+  color: var(--red);
+  font-size: x-large;
+}
+
 .past {
   background-color: var(--grey);
   color: white;
@@ -102,7 +110,24 @@ tbody {
 }
 
 .saveBtn:hover {
-  background-color: var(--green);
+  background-color: var(--darkgreen);
   transition: all .3s ease-in-out;
   cursor: pointer;
+}
+
+.saveBtn.inactive {
+  background-color: var(--grey);
+  color: var(--darkgrey);
+}
+
+.saveBtn.inactive:hover {
+  background-color: var(--grey);
+  color: var(--darkgrey);
+  cursor: not-allowed;
+}
+
+.hour.inactive {
+  /*background-color: var(--grey);*/
+  color: var(--darkgrey);
+  font-size: 0.8rem;
 }
